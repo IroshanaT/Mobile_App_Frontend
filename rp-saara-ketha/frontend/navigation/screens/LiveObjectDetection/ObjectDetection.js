@@ -22,11 +22,11 @@ import {
   import { Ionicons, MaterialIcons } from "@expo/vector-icons";
 
 
-  export default function LocationTracking() {
+  export default function ObjectDetection() {
     return(
         <NativeBaseProvider>
-           <Box>Hello</Box>
-        </NativeBaseProvider >
+           <Box>Object Detection</Box>
+        </NativeBaseProvider>
 
 
     )

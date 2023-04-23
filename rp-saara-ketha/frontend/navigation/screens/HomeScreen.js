@@ -1,4 +1,4 @@
-import { View, StyleSheet, TouchableOpacity, Image } from "react-native";
+import { View, StyleSheet, TouchableOpacity, Image,ImageBackground } from "react-native";
 import React, { useState, useEffect } from "react";
 //import Constants from "../../constants/Constants";
 //import axios from "axios";
@@ -30,6 +30,7 @@ export default function HomeScreen({ navigation }) {
       <View style={styles.container}>
         {/* icons for menu in the top left corner */}
 
+       
         <View style={styles.menu}>
           <Flex direction="row" alignItems="center">
             <IconButton
@@ -83,14 +84,15 @@ export default function HomeScreen({ navigation }) {
             <View style={styles.card}>
               <Image
                 style={styles.image}
-                //source={require("../../assets/images/commiunity.png")}
+                source={require("../../assets/homescreen/camera.png")}
+                
               />
               <Flex direction="row" style={styles.cardContent}>
                 <Text style={styles.text1}>Live Object Detection</Text>
                 <Button
                   style={styles.button1}
                   size="sm"
-                  onPress={() => navigation.navigate("")}
+                  onPress={() => navigation.navigate("ObjectDetection")}
                   backgroundColor={"rgba(26, 182, 92, 1)"}
                 >
                   <Text style={styles.textBtn1}>
@@ -103,11 +105,10 @@ export default function HomeScreen({ navigation }) {
                 </Button>
               </Flex>
             </View>
-
             <View style={styles.card}>
               <Image
                 style={styles.image}
-               // source={require("../../assets/images/joinCom.png")}
+               source={require("../../assets/homescreen/location_tracking.png")}
               />
               <Flex direction="row" style={styles.cardContent}>
                 <Text style={styles.text1}>Live Location Tracker</Text>
@@ -128,12 +129,12 @@ export default function HomeScreen({ navigation }) {
               </Flex>
             </View>
           </Flex>
-
           <Flex direction="row" style={styles.container}>
             <View style={styles.card}>
               <Image
                 style={styles.image}
-               // source={require("../../assets/images/eventDash.png")}
+               source={require("../../assets//homescreen/Rice_Veriety.png")}
+             
               />
               <Flex direction="row" style={styles.cardContent}>
                 <Text style={styles.text1}>Rice Veriety Selector</Text>
@@ -157,14 +158,15 @@ export default function HomeScreen({ navigation }) {
             <View style={styles.card}>
               <Image
                 style={styles.image}
-                //source={require("../../assets/images/ourGoals.png")}
+                source={require("../../assets/homescreen/heathy_detector.png")}
+               
               />
               <Flex direction="row" style={styles.cardContent}>
                 <Text style={styles.text1}>Heathy Detector</Text>
                 <Button
                   style={styles.button1}
                   size="sm"
-                  onPress={() => navigation.navigate("ProcessUpCommingEvent")}
+                  onPress={() => navigation.navigate("HeathyChecker")}
                   backgroundColor={"rgba(26, 182, 92, 1)"}
                 >
                   <Text style={styles.textBtn1}>
@@ -175,11 +177,13 @@ export default function HomeScreen({ navigation }) {
                     />
                   </Text>
                 </Button>
-              </Flex>
+              </Flex> 
             </View>
-          </Flex>
+          </Flex>       
         </ScrollView>
       </View>
+      
+      
     </NativeBaseProvider>
   );
 }
@@ -202,7 +206,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "white",
+    backgroundColor: "#AFF3C2",
   },
   header: {
     width: "90%",
@@ -239,11 +243,11 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   image: {
-    width: "95%",
+    width: "60%",
     alignSelf: "center",
     height: 160,
-    marginTop: -30,
-    marginBottom: 10,
+    marginTop: -20,
+    marginBottom: 5,
     resizeMode: "contain",
     shadowColor: "#000",
     shadowOffset: {
@@ -373,6 +377,7 @@ const styles = StyleSheet.create({
     marginTop:5,
   },
   name: {
-    color: "rgba(26, 182, 92, 1)",
+    color: "#000000",
+    //rgba(26, 182, 92, 1)
   },
 });
